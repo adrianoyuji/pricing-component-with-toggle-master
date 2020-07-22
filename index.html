@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <!-- displays site properly based on user's device -->
 
     <link
@@ -16,10 +17,15 @@
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
+      @font-face {
+        font-family: Montserrat;
+        src: url("./font/Montserrat-Bold.ttf");
+      }
+
       html {
         height: 100%;
         width: auto;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: Montserrat, Arial;
       }
       body {
         background-image: url("./images/bg-bottom.svg"),
@@ -117,19 +123,18 @@
         border-width: 1px;
         padding: 16px 0px 16px 0px;
         font-size: 1rem;
-        font-weight: bold;
       }
       .card-title {
         color: #6f7085;
         text-align: center;
-        font-weight: bold;
+        font-weight: 700;
         font-size: 1.2rem;
         padding: 16px 0px 0px 0px;
       }
       .card-price {
         color: #4a4c61;
         font-size: 4rem;
-        font-weight: bold;
+        font-weight: 500;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -141,7 +146,7 @@
       }
       .card-price .dollar-sign {
         font-size: 2rem;
-        font-weight: bold;
+        font-weight: 700;
       }
       .basic-button {
         background-image: linear-gradient(to right, #a2a4f1, #8b8fe6);
@@ -152,7 +157,7 @@
         text-align: center;
         text-decoration: none;
         width: 100%;
-        font-weight: bold;
+        font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 3px;
         font-size: 0.8rem;
@@ -175,7 +180,7 @@
         text-align: center;
         text-decoration: none;
         width: 100%;
-        font-weight: bold;
+        font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 3px;
         font-size: 0.8rem;
