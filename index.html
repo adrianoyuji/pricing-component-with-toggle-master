@@ -296,7 +296,7 @@
         Annually
       </h4>
       <label class="switch">
-        <input type="checkbox" />
+        <input type="checkbox" id="kit-toggler" onClick="changeValues();" />
         <span class="slider round"></span>
       </label>
       <h4>
@@ -307,7 +307,8 @@
       <div class="basic-card-left">
         <div class="card-title">Basic</div>
         <div class="card-price">
-          <span class="dollar-sign">&dollar;</span>19.99
+          <span class="dollar-sign">&dollar;</span
+          ><span id="value-pack-basic">199.99</span>
         </div>
         <div class="feature-list">
           <div class="card-feature">500 GB Storage</div>
@@ -321,7 +322,8 @@
       <div class="professional-card">
         <div class="card-title">Professional</div>
         <div class="card-price">
-          <span class="dollar-sign">&dollar;</span>24.99
+          <span class="dollar-sign">&dollar;</span
+          ><span id="value-pack-pro">249.99</span>
         </div>
         <div class="feature-list">
           <div class="card-feature">1 TB Storage</div>
@@ -334,7 +336,8 @@
       <div class="basic-card-right">
         <div class="card-title">Master</div>
         <div class="card-price">
-          <span class="dollar-sign">&dollar;</span>39.99
+          <span class="dollar-sign">&dollar;</span
+          ><span id="value-pack-master">399.99</span>
         </div>
         <div class="feature-list">
           <div class="card-feature">2 TB Storage</div>
@@ -344,6 +347,43 @@
         <button class="basic-button">Learn More</button>
       </div>
     </div>
+    <script>
+      function changeValues() {
+        let basic = document.getElementById("value-pack-basic");
+        let pro = document.getElementById("value-pack-pro");
+        let master = document.getElementById("value-pack-master");
+        if (document.getElementById("kit-toggler").checked) {
+          let newValue = ["19.99", "24.99", "39.99"];
+
+          basic.replaceChild(
+            document.createTextNode(newValue[0]),
+            basic.childNodes[0]
+          );
+          pro.replaceChild(
+            document.createTextNode(newValue[1]),
+            pro.childNodes[0]
+          );
+          master.replaceChild(
+            document.createTextNode(newValue[2]),
+            master.childNodes[0]
+          );
+        } else {
+          let newValue = ["199.99", "249.99", "399.99"];
+          basic.replaceChild(
+            document.createTextNode(newValue[0]),
+            basic.childNodes[0]
+          );
+          pro.replaceChild(
+            document.createTextNode(newValue[1]),
+            pro.childNodes[0]
+          );
+          master.replaceChild(
+            document.createTextNode(newValue[2]),
+            master.childNodes[0]
+          );
+        }
+      }
+    </script>
   </body>
   <footer class="attribution">
     Challenge by
